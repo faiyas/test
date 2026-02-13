@@ -30,9 +30,11 @@ ENV/
 db.sqlite3
 *.sqlite3
 
-# Environment files
+# Environment files - Ignore ALL env files
 .env
 .env.local
+.env.railway
+.env.*
 
 # Media files (optional - uncomment if you don't want to include media in image)
 # media/
