@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: campus-connection-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate"
+    startCommand: "gunicorn camera_demo_backend.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: DJANGO_SETTINGS_MODULE
+        value: camera_demo_backend.settings
+
+databases:
+  - name: campus-connection-db
+    databaseName: campus_connection
+    user: campus_user
+

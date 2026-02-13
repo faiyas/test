@@ -1,0 +1,52 @@
+# Ignore files that shouldn't be in Docker image
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Database
+db.sqlite3
+*.sqlite3
+
+# Environment files
+.env
+.env.local
+
+# Media files (optional - uncomment if you don't want to include media in image)
+# media/
+
+# Test files
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Deployment files
+*.md
+DEPLOYMENT.md
+RAILWAY_QUICK_START.md
